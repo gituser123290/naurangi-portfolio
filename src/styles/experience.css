@@ -9,7 +9,7 @@ h2{
     text-align: center;
     font-weight: bold;
     font-size: 30px;
-    color: rgb(144, 152, 176);
+    color: rgb(0, 0, 1);
 }
 .exp_main_one{
     display: flex;
@@ -36,10 +36,10 @@ h2{
     padding: 25px;
     box-shadow: 0 5px 10px rgba(15,50,150,0.5);
     border-radius: 10px;
-    background-color: rgb(198, 191, 191);
+    background-color: rgb(241, 210, 210);
     transition: transform 0.3s ease;
     &:hover{
-        background-color: rgb(185, 177, 177);
+        background-color: rgb(241, 210, 210);
         transition: background-color 0.3s ease;
         cursor: pointer;
         transform: scale(1.05);
@@ -52,10 +52,10 @@ h2{
     padding: 25px;
     box-shadow: 0 5px 10px rgba(15,50,150,0.5);
     border-radius: 10px;
-    background-color: rgb(198, 191, 191);
+    background-color: rgb(241, 210, 210);
     transition: transform 0.3s ease;
     &:hover{
-        background-color: rgb(185, 177, 177);
+        background-color: rgb(241, 210, 210);
         transition: background-color 0.3s ease;
         cursor: pointer;
         transform: scale(1.05);
@@ -69,10 +69,10 @@ h2{
     margin-bottom: 20px;
     box-shadow: 0 5px 10px rgba(15,50,150,0.5);
     border-radius: 10px;
-    background-color: rgb(198, 191, 191);
+    background-color: rgb(241, 210, 210);
     transition: transform 0.3s ease;
     &:hover{
-        background-color: rgb(185, 177, 177);
+        background-color: rgb(247, 213, 213);
         transition: background-color 0.3s ease;
         cursor: pointer;
         transform: scale(1.05);

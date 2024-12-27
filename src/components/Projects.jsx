@@ -1,6 +1,9 @@
 import '../styles/main.css';
 import { useEffect,useRef } from 'react';
 import { initializeVanta } from '../VantaEffect';
+// import { FaReact,FaDjango,FaNodeJs,FaJS,FaExprees } from "react-icons/fa";
+// import { SiExpress } from "react-icons/si";
+// import { IoLogoNodejs } from "react-icons/io5";
 
 const projects = [
   {
