@@ -14,7 +14,7 @@ export default function Navbar(){
             <a href="#contact_me" className="nav_link">
               <FaEnvelope /> Contact
             </a>
-            <a href="https://docs.google.com/document/d/1KBt1aMgGC9xsR2AobqpySRB8ssmS0JZY-7fbMp4PqGI/edit?usp=sharing" target="_blank" className="nav_link">
+            <a href="https://docs.google.com/document/d/15wgTWyxYrnZ2nl6zRlyOEM-Y8WSJiczfeHZ5wdq3iZI/edit?usp=sharing" target="_blank" className="nav_link">
               <FaFile /> Resume
             </a>
             <a href="https://github.com/Naurangi123" target="_blank" className="nav_link">
