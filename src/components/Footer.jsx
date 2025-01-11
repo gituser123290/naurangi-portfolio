@@ -22,7 +22,7 @@ export default function Footer (){
         <div className='two'>
           <a href='https://www.linkedin.com/in/naurangi-lal-aa3175228/' target='_blank'>LinkedIn</a>
           <a href='https://github.com/naurangi123' target='_blank'>GitHub</a>
-          <a href='mailto:naurangilal9675329115' target='_blank'>Email</a>
+          <a href='mailto:naurangilal9675329115@gmail.com' target='_blank'>Email</a>
         </div>
         <div className='hero-contact-me-btn'>
           <a href='mailto:naurangilal9675329115@gmail.com'>Get to Me</a>
