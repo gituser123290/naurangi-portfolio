@@ -1,75 +1,141 @@
-import '../styles/main.css';
-import { useEffect,useRef } from 'react';
-import { initializeVanta } from '../VantaEffect';
-// import { FaReact,FaDjango,FaNodeJs,FaJS,FaExprees } from "react-icons/fa";
-// import { SiExpress } from "react-icons/si";
-// import { IoLogoNodejs } from "react-icons/io5";
+import { useEffect, useRef } from "react";
+import { initializeVanta } from "../VantaEffect";
+import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Expanse Tracker",
-    description: "This is a Expanse Tracker site where Anyone can register and login to track weekly monthly and yearly expanses on their daily routine like where are which money is expand and many more.",
-    techStack: ["Python", "Django","HTML", "CSS"],
-    frontendUrl: "https://github.com/Naurangi123/expense-tracker",
-    backendUrl: "https://github.com/Naurangi123/expense-tracker",
-    liveUrl: "https://github.com/Naurangi123/expense-tracker",
-    imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjuMrChM-MXX4qhxllxquerNVUSzEWqmsn2Q&s"
-  },
-  
-  {
-    title: "Study Center/Room",
-    description: "This is a study Togather site where Learners and teachers can register and login to teach and learn anything whatever they want to teach and learn.",
-    techStack: ["Python", "Django", "HTML", "CSS", "JavaScript"],
-    frontendUrl: "https://www.shutterstock.com/image-photo/group-students-leaned-desk-full-260nw-2449569173.jpg",
-    liveUrl: "https://naurangi.pythonanywhere.com/",
-    backendUrl: "https://github.com/gituser123290/study-project-1",
-    imgSrc: "https://www.shutterstock.com/image-photo/group-students-leaned-desk-full-260nw-2449569173.jpg",
+    title: "IETE Project",
+    description:
+      "A live government project built with Django and React for managing memberships, approvals, and digital workflows. Includes multi-stage approvals, notifications, and secure authentication. Designed for scalability and security, it integrates PostgreSQL and TailwindCSS for a modern UI. The system features advanced Role-Based Access Control (RBAC), user-role hierarchies, dynamic permission management, and role-based authentication flows. It supports fine-grained access control for different user types, multi-stage approval processes with percentage thresholds, and automated audit logging for compliance.",
+    techStack: ["Django", "React", "PostgreSQL", "TailwindCSS"],
+    frontendUrl: "https://github.com/Naurangi123/iete-frontend",
+    backendUrl: "https://github.com/Naurangi123/iete-backend",
+    liveUrl: "http://sec.acstechconsulting.com:3000/",
+    imgSrc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPPyaK5QqYcWmXnOfRkHdybXcC1jV1pM7yOQ&s",
   },
   {
-    title: "Social Media Application",
-    description: "This is a social media application where User can register and login to create post, like the post,followers,comment on post and chat with anyone.",
-    techStack: ["JavaScrip", "NodeJS","ReactJS", "React-Bootstrap","ExpressJS"],
-    frontendUrl: "https://github.com/Naurangi123/SocialMediaWithNode",
-    backendUrl: "https://github.com/Naurangi123/SocialMediaWithNode",
-    liveUrl: "https://github.com/Naurangi123/SocialMediaWithNode",
-    imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuBqH1kUYajEybjYe3p5pSOsIcMhgFmu5F1g&s"
+    title: "Restaurant Project (QR Ordering System)",
+    description:
+      "A restaurant management system with QR-based menu, order placement, payments, receipts, and real-time order tracking. Built using Django REST + React.",
+    techStack: ["Django REST", "React", "MySQL", "TailwindCSS"],
+    frontendUrl: "https://github.com/Naurangi123/restaurant-frontend",
+    backendUrl: "https://github.com/Naurangi123/restaurant-backend",
+    liveUrl: "https://restaurant-demo.vercel.app/",
+    imgSrc:
+      "https://img.freepik.com/free-vector/restaurant-app-concept_23-2148475345.jpg",
+  },
+  {
+    title: "Multi-Vendor Marketplace Project",
+    description:
+      "An e-commerce marketplace like Amazon/Flipkart where vendors can manage products, customers can browse & purchase, and admins can oversee analytics, orders, and payments.",
+    techStack: ["Django", "React", "PostgreSQL", "TailwindCSS"],
+    frontendUrl: "https://github.com/Naurangi123/multivendor-frontend",
+    backendUrl: "https://github.com/Naurangi123/multivendor-backend",
+    liveUrl: "https://multivendor-demo.vercel.app/",
+    imgSrc:
+      "https://img.freepik.com/free-vector/ecommerce-web-page-concept-illustration_114360-8183.jpg",
   },
 ];
 
 const Projects = () => {
-
   const backgroundRef = useRef(null);
-  
-    useEffect(() => {
-      const cleanup = initializeVanta(backgroundRef.current,'halo');
-      return () => {
-        cleanup();
-      };
-    }, [])
+
+  useEffect(() => {
+    const cleanup = initializeVanta(backgroundRef.current, "halo");
+    return () => {
+      cleanup();
+    };
+  }, []);
 
   return (
-    <>
-      <h1 className="project-header">Projects</h1>
-      {projects.map((project, index) => (
-        <div key={index} className="project">
-          <div className="project-img-wrapper">
-            <img src={project.imgSrc} alt={project.title} />
-          </div>
-          <div className="project-text-wrapper">
-            <h3>{project.title}</h3>
-            <div className="tech-stacks-used">
-              {project.techStack.map((tech, i) => <h5 key={i}>{tech}</h5>)}
+    <section
+      id="projects"
+      ref={backgroundRef}
+      className="relative py-20 px-6 bg-gray-50"
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-12">
+          Projects
+        </h2>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col hover:shadow-2xl transition group"
+            >
+              {/* Project Image */}
+              <div className="h-48 w-full overflow-hidden">
+                <img
+                  src={project.imgSrc}
+                  alt={project.title}
+                  className="object-cover w-full h-full hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Project Details */}
+              <div className="flex flex-col flex-grow p-6 relative">
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <div className="relative">
+                  <p className="text-gray-600 text-sm mb-4 overflow-hidden max-h-20 group-hover:overflow-y-auto pr-2 transition-all duration-300 ease-in-out">
+                    {project.description}
+                  </p>
+
+                  {/* Gradient fade when collapsed */}
+                  <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-white to-transparent pointer-events-none group-hover:opacity-0 transition-opacity duration-300"></div>
+                </div>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.techStack.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="bg-indigo-100 text-indigo-700 text-xs px-3 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Action Links */}
+                <div className="flex justify-between mt-auto">
+                  <a
+                    href={project.backendUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-700 hover:text-indigo-600 flex items-center gap-1 text-sm"
+                  >
+                    <FaCode /> Backend
+                  </a>
+                  <a
+                    href={project.frontendUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-700 hover:text-indigo-600 flex items-center gap-1 text-sm"
+                  >
+                    <FaGithub /> Frontend
+                  </a>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded-md text-sm flex items-center gap-1"
+                  >
+                    Live <FaExternalLinkAlt />
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className='project_code'>
-              <a href={project.backendUrl} target="_blank" className="view-code">Backend Code</a>
-              <a href={project.frontendUrl} target="_blank" className="view-code">Frontend Code</a>
-            </div>
-            <p className='desc'>{project.description}</p>
-            <a className="see-website-button" href={project.liveUrl} target="_blank">View Project</a>
-          </div>
+          ))}
         </div>
-      ))}
-     </> 
+      </div>
+    </section>
   );
 };
 
